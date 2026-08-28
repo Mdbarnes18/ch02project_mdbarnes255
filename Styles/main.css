@@ -1,17 +1,37 @@
-/* 
-  Name: Michael Barnes
-  Date: 08/28/2026
+/*
+Name: Michael Barnes
+Date: 08/28/2026
 */
 
 h1 {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    font-size: 3em;
+font-family: Georgia, "Times New Roman", serif;
+font-size: 3em;
 }
 
 .sample-class {
-    color: #2c5282;
+color: #2c5282;
 }
 
 #footer {
-    font-size: 0.9em;
+font-size: 0.9em;
+}
+
+.bordered-image {
+border: 3px solid #2c5282;
+}
+
+#image-flex {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+}
+
+#image-flex figure {
+margin: 0;
+flex: 1 1 200px;
+}
+
+#image-flex img {
+width: 100%;
+height: auto;
 }

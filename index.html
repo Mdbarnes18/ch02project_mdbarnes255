@@ -1,5 +1,7 @@
 <!-- Name: Michael Barnes | Date: 08/28/2026 -->
+
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,45 +12,131 @@
         a {
             color: #0056b3;
         }
-        a:visited {
-            color: #4b0082;
-        }
-        a:hover, a:focus {
-            color: #d9534f;
-        }
-    </style>
+
+```
+    a:visited {
+        color: #4b0082;
+    }
+
+    a:hover,
+    a:focus {
+        color: #d9534f;
+    }
+</style>
+```
+
 </head>
+
 <body>
     <!-- Updated on 08/28/2026 -->
 
-    <h1 style="color: #1a365d;">Building Your First Webpage</h1>
+```
+<h1 style="color: #1a365d;">Building Your First Webpage</h1>
 
-    <p>Michael Barnes</p>
+<p>Michael Barnes</p>
 
-    <h2 class="sample-class">My First Repository</h2>
-    <p>
-        <a href="https://github.com/Mdbarnes18/ch02project_Mdbarnes18" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           title="ch02project_Mdbarnes18">
-            View my GitHub Repository
-        </a>
-    </p>
+<h2 class="sample-class">My First Repository</h2>
 
-    <h2>Building HTML Lists</h2>
-    <dl>
-        <dt>embedded style sheet</dt>
-        <dd>A collection of CSS rules defined directly inside a <code>&lt;style&gt;</code> element within the <code>&lt;head&gt;</code> section of an HTML document.</dd>
+<p>
+    <a href="https://github.com/Mdbarnes18/ch02project_Mdbarnes18"
+       target="_blank"
+       rel="noopener noreferrer"
+       title="ch02project_Mdbarnes18">
+        View my GitHub Repository
+    </a>
+</p>
 
-        <dt>external style sheet</dt>
-        <dd>A standalone file with a <code>.css</code> extension containing CSS rules that are linked to an HTML document using the <code>&lt;link&gt;</code> element.</dd>
+<h2>Building HTML Lists</h2>
 
-        <dt>inline style</dt>
-        <dd>CSS declarations applied directly to a single HTML element using the <code>style</code> attribute.</dd>
-    </dl>
+<dl>
+    <dt>embedded style sheet</dt>
+    <dd>
+        A collection of CSS rules defined directly inside a
+        <code>&lt;style&gt;</code> element within the
+        <code>&lt;head&gt;</code> section of an HTML document.
+    </dd>
 
-    <footer id="footer">
-        <p>&copy;2025, Michael Barnes</p>
-    </footer>
+    <dt>external style sheet</dt>
+    <dd>
+        A standalone file with a <code>.css</code> extension containing
+        CSS rules that are linked to an HTML document using the
+        <code>&lt;link&gt;</code> element.
+    </dd>
+
+    <dt>inline style</dt>
+    <dd>
+        CSS declarations applied directly to a single HTML element
+        using the <code>style</code> attribute.
+    </dd>
+</dl>
+
+<h2>Working With Images</h2>
+
+<img src="media/image.png"
+     alt="PNG version of the selected image"
+     width="250">
+
+<img src="media/image.jpg"
+     alt="JPG version of the selected image"
+     width="250">
+
+<p>
+    The PNG and JPG versions of the image may have different file sizes.
+    PNG files generally preserve more image detail, while JPG files use
+    compression that can reduce the file size and may cause some loss of
+    image quality.
+</p>
+
+<figure>
+    <img src="media/chosen-image.jpg"
+         alt="Description of the chosen image"
+         class="bordered-image"
+         width="250">
+    <figcaption>
+        A short description of the chosen image.
+    </figcaption>
+</figure>
+
+<h2>Responsive Design Images</h2>
+
+<section id="image-flex">
+    <figure>
+        <img src="media/images1.jpg"
+             alt="A vintage beige computer with a classic, retro design.">
+        <figcaption>
+            A vintage beige computer with a classic, retro design.
+        </figcaption>
+    </figure>
+
+    <figure>
+        <img src="media/images2.jpg"
+             alt="A colorful computer screen displaying a mixture of programming code.">
+        <figcaption>
+            A colorful computer screen displaying a mixture of programming code.
+        </figcaption>
+    </figure>
+
+    <figure>
+        <img src="media/images3.jpg"
+             alt="The Linux penguin mascot wearing glasses with a green shell in the background.">
+        <figcaption>
+            The Linux penguin mascot wearing glasses with a green shell in the background.
+        </figcaption>
+    </figure>
+
+    <figure>
+        <img src="media/images4.jpg"
+             alt="The Windows 11 desktop displaying its modern interface.">
+        <figcaption>
+            The Windows 11 desktop displaying its modern interface.
+        </figcaption>
+    </figure>
+</section>
+
+<footer id="footer">
+    <p>&copy;2025, Michael Barnes</p>
+</footer>
+```
+
 </body>
 </html>
