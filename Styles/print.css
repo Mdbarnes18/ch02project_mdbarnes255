@@ -1,0 +1,33 @@
+/*
+Name: Michael Barnes
+Date: 08/28/2026
+*/
+
+/* Hide navigation when the page is printed */
+nav {
+display: none;
+}
+
+/* Hide all images when the page is printed */
+img {
+display: none;
+}
+
+/* Display sections vertically when printed */
+section {
+display: block;
+width: 100%;
+margin-bottom: 20px;
+}
+
+/* Keep the page readable when printed */
+body {
+display: block;
+font-family: "Times New Roman", Times, serif;
+}
+
+header,
+main,
+footer {
+width: 100%;
+}

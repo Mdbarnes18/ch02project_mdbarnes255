@@ -7,9 +7,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Building Your First Webpage</title>
-    <link rel="stylesheet" href="styles/main.css">
 
 ```
+<link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="styles/print.css" media="print">
+
 <style>
     a {
         color: #0056b3;
@@ -38,9 +40,15 @@
 
 <nav>
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="#">About</a>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+        </li>
     </ul>
 </nav>
 
@@ -62,48 +70,60 @@
         <h2>Building HTML Lists</h2>
 
         <dl>
-            <dt>embedded style sheet</dt>
+            <dt>Embedded style sheet</dt>
             <dd>
                 A collection of CSS rules defined directly inside a
                 <code>&lt;style&gt;</code> element within the
                 <code>&lt;head&gt;</code> section of an HTML document.
             </dd>
 
-            <dt>external style sheet</dt>
+            <dt>External style sheet</dt>
             <dd>
-                A standalone file with a <code>.css</code> extension
-                containing CSS rules that are linked to an HTML document
-                using the <code>&lt;link&gt;</code> element.
+                A standalone CSS file containing rules that are linked
+                to an HTML document using the
+                <code>&lt;link&gt;</code> element.
             </dd>
 
-            <dt>inline style</dt>
+            <dt>Inline style</dt>
             <dd>
-                CSS declarations applied directly to a single HTML
-                element using the <code>style</code> attribute.
+                CSS declarations applied directly to an individual
+                HTML element using the <code>style</code> attribute.
             </dd>
         </dl>
 
         <h2>Working With Images</h2>
 
-        <img src="media/retro.png"
-             alt="A retro computer desk setup with a classic vintage computer in PNG format."
-             width="167"
-             height="250"
-             class="bordered-image">
+        <figure>
+            <img src="media/retro.png"
+                 alt="A retro computer desk setup with a classic vintage computer in PNG format."
+                 width="167"
+                 height="250"
+                 class="bordered-image">
 
-        <img src="media/retro.jpg"
-             alt="A retro computer desk setup with a classic vintage computer in JPG format."
-             width="167"
-             height="250"
-             class="bordered-image">
+            <figcaption>
+                PNG version of a retro computer desk setup.
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="media/retro.jpg"
+                 alt="A retro computer desk setup with a classic vintage computer in JPG format."
+                 width="167"
+                 height="250"
+                 class="bordered-image">
+
+            <figcaption>
+                JPG version of a retro computer desk setup.
+            </figcaption>
+        </figure>
 
         <p>
-            The PNG and JPG versions show the same retro computer desk
-            image. The PNG version preserves more image information,
-            while the JPG version uses compression to create a smaller
-            file size. The two images may have slight differences in
-            visual quality because of the compression used by the JPG
-            format.
+            The PNG and JPG versions display the same retro computer
+            desk image. The PNG format generally preserves more image
+            information, while JPG uses compression to reduce the file
+            size. Depending on the amount of compression, the JPG image
+            may show slight differences in visual quality compared with
+            the PNG version.
         </p>
 
         <figure>
@@ -112,7 +132,8 @@
                  class="bordered-image">
 
             <figcaption>
-                A vintage IBM computer keyboard featuring a classic retro design.
+                A vintage IBM computer keyboard featuring a classic
+                retro design.
             </figcaption>
         </figure>
     </section>
@@ -122,31 +143,37 @@
 
         <figure>
             <img src="media/images1.jpg"
-                 alt="A vintage beige computer with a classic, retro design.">
+                 alt="A vintage beige computer with a classic retro design.">
+
             <figcaption>
-                A vintage beige computer with a classic, retro design.
+                A vintage beige computer with a classic retro design.
             </figcaption>
         </figure>
 
         <figure>
             <img src="media/images2.jpg"
                  alt="A colorful computer screen displaying a mixture of programming code.">
+
             <figcaption>
-                A colorful computer screen displaying a mixture of programming code.
+                A colorful computer screen displaying a mixture of
+                programming code.
             </figcaption>
         </figure>
 
         <figure>
             <img src="media/images3.jpg"
                  alt="The Linux penguin mascot wearing glasses with a green shell in the background.">
+
             <figcaption>
-                The Linux penguin mascot wearing glasses with a green shell in the background.
+                The Linux penguin mascot wearing glasses with a green
+                shell in the background.
             </figcaption>
         </figure>
 
         <figure>
             <img src="media/images4.jpg"
                  alt="The Windows 11 desktop displaying its modern interface.">
+
             <figcaption>
                 The Windows 11 desktop displaying its modern interface.
             </figcaption>
