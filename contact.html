@@ -12,6 +12,8 @@
 <link rel="stylesheet" href="styles/main.css">
 <link rel="stylesheet" href="styles/print.css" media="print">
 
+<script src="scripts/form-validation.js" defer></script>
+
 <style>
     a {
         color: #0056b3;
@@ -44,7 +46,7 @@
             <a href="index.html">Home</a>
         </li>
         <li>
-            <a href="#">About</a>
+            <a href="about.html">About</a>
         </li>
         <li>
             <a href="contact.html">Contact</a>
@@ -70,22 +72,23 @@
         </p>
 
         <p>
-            In addition, programming in Linux and working with computer
-            hardware are things that I enjoy. I also have a strong interest
-            in computer software, which has made me the go-to tech expert
-            in my family.
+            I also enjoy programming in Linux and working with computer
+            hardware. I have a strong interest in computer software, which
+            has made me the person my family goes to when they need help
+            with technology.
         </p>
     </section>
 
     <section>
         <h2>Contact Form</h2>
 
-        <form action="#" method="post">
+        <form id="contact-form" action="#" method="post">
             <p>
                 <label for="name">Name:</label><br>
                 <input type="text"
                        id="name"
                        name="name"
+                       class="required"
                        required>
             </p>
 
@@ -94,12 +97,16 @@
                 <input type="email"
                        id="email"
                        name="email"
+                       class="required"
                        required>
             </p>
 
             <p>
                 <label for="reason">Reason for Contact:</label><br>
-                <select id="reason" name="reason" required>
+                <select id="reason"
+                        name="reason"
+                        class="required"
+                        required>
                     <option value="">Select an option</option>
                     <option value="question">General Question</option>
                     <option value="project">Project Question</option>
@@ -111,14 +118,19 @@
                 <label for="message">Message:</label><br>
                 <textarea id="message"
                           name="message"
+                          class="required"
                           rows="5"
                           cols="40"
                           required></textarea>
             </p>
 
             <p>
-                <input type="button" value="Submit">
+                <input type="button"
+                       id="submit-button"
+                       value="Submit">
             </p>
+
+            <span id="missing-count"></span>
         </form>
     </section>
 </main>
