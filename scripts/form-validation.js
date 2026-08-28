@@ -51,7 +51,7 @@ return true;
 }
 
 /*
-This function runs checkMissing() and validateEmail()
+This function runs both checkMissing() and validateEmail()
 when the submit button is clicked.
 */
 function validateForm() {
@@ -69,3 +69,31 @@ return true;
 ```
 
 }
+
+/*
+This event listener connects the submit button
+to the validation function after the page loads.
+*/
+window.addEventListener("load", function() {
+const button = document.getElementById("submit-button");
+
+```
+console.log("Page loaded. Found button:", button);
+
+if (button) {
+    console.log("Button found. Attaching click event.");
+
+    button.addEventListener("click", function() {
+        console.log("Submit button clicked.");
+        validateForm();
+    });
+
+    console.log("Click listener successfully attached!");
+} else {
+    console.error(
+        "FAILED: No element with id='submit-button' exists in the HTML."
+    );
+}
+```
+
+});
