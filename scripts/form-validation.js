@@ -4,31 +4,28 @@ Date: 08/28/2026
 */
 
 /*
-This function checks the required fields and counts
+This function checks all required fields and counts
 the fields that are empty.
 */
 function checkMissing() {
-const requiredFields = document.querySelectorAll(".required");
-const missingCount = document.getElementById("missing-count");
-let count = 0;
+const fields = document.querySelectorAll(".required");
+const missingMessage = document.getElementById("missing-count");
+let missing = 0;
 
 ```
-requiredFields.forEach(function(field) {
-    if (field.value.trim() === "") {
-        count++;
-        field.style.borderColor = "#cc0000";
-    } else {
-        field.style.borderColor = "#e6b800";
+for (let i = 0; i < fields.length; i++) {
+    if (fields[i].value.trim() === "") {
+        missing++;
     }
-});
+}
 
-if (count > 0) {
-    missingCount.textContent =
-        count + " required field(s) are missing.";
+if (missing > 0) {
+    missingMessage.textContent =
+        missing + " required field(s) are missing.";
     return false;
 }
 
-missingCount.textContent = "";
+missingMessage.textContent = "";
 return true;
 ```
 
@@ -54,31 +51,34 @@ return true;
 }
 
 /*
-This function runs the required-field and email
-validation checks when the submit button is clicked.
+This function runs all validation checks when
+the submit button is clicked.
 */
 function validateForm() {
-const fieldsValid = checkMissing();
-const emailValid = validateEmail();
+const missingFields = checkMissing();
+const validEmail = validateEmail();
 
 ```
-if (!fieldsValid || !emailValid) {
+if (!missingFields || !validEmail) {
     alert("Please complete all required fields and enter a valid email address.");
-    return false;
+} else {
+    alert("Your form has been submitted successfully.");
 }
-
-alert("Your form has been submitted successfully.");
-return true;
 ```
 
 }
 
 /*
 This event listener connects the submit button
-to the validation function.
+to the validation function after the page loads.
 */
-const submitButton = document.getElementById("submit-button");
+window.addEventListener("load", function() {
+const button = document.getElementById("submit-button");
 
-submitButton.addEventListener("click", function() {
-validateForm();
+```
+if (button) {
+    button.addEventListener("click", validateForm);
+}
+```
+
 });
