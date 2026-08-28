@@ -5,7 +5,7 @@ Date: 08/28/2026
 
 /*
 This function checks the required fields and counts
-the fields that have not been completed.
+the fields that are empty.
 */
 function checkMissing() {
 const requiredFields = document.querySelectorAll(".required");
@@ -16,6 +16,9 @@ let count = 0;
 requiredFields.forEach(function(field) {
     if (field.value.trim() === "") {
         count++;
+        field.style.borderColor = "#cc0000";
+    } else {
+        field.style.borderColor = "#e6b800";
     }
 });
 
@@ -51,8 +54,8 @@ return true;
 }
 
 /*
-This function runs both validation functions and
-prevents the form from being submitted when errors exist.
+This function runs the required-field and email
+validation checks when the submit button is clicked.
 */
 function validateForm() {
 const fieldsValid = checkMissing();
@@ -61,25 +64,21 @@ const emailValid = validateEmail();
 ```
 if (!fieldsValid || !emailValid) {
     alert("Please complete all required fields and enter a valid email address.");
-    return;
+    return false;
 }
 
 alert("Your form has been submitted successfully.");
+return true;
 ```
 
 }
 
 /*
-This event listener connects the input button
-to the form validation function.
+This event listener connects the submit button
+to the validation function.
 */
-document.addEventListener("DOMContentLoaded", function() {
 const submitButton = document.getElementById("submit-button");
 
-```
 submitButton.addEventListener("click", function() {
-    validateForm();
-});
-```
-
+validateForm();
 });
