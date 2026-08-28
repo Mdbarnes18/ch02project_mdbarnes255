@@ -32,112 +32,127 @@
     <!-- Updated on 08/28/2026 -->
 
 ```
-<h1 style="color: #1a365d;">Building Your First Webpage</h1>
+<header>
+    <h1 style="color: #1a365d;">Building Your First Webpage</h1>
+</header>
 
-<p>Michael Barnes</p>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
 
-<h2 class="sample-class">My First Repository</h2>
+<main>
+    <section>
+        <p>Michael Barnes</p>
 
-<p>
-    <a href="https://github.com/Mdbarnes18/ch02project_Mdbarnes18"
-       target="_blank"
-       rel="noopener noreferrer"
-       title="ch02project_Mdbarnes18">
-        View my GitHub Repository
-    </a>
-</p>
+        <h2 class="sample-class">My First Repository</h2>
 
-<h2>Building HTML Lists</h2>
+        <p>
+            <a href="https://github.com/Mdbarnes18/ch02project_Mdbarnes18"
+               target="_blank"
+               rel="noopener noreferrer"
+               title="ch02project_Mdbarnes18">
+                View my GitHub Repository
+            </a>
+        </p>
 
-<dl>
-    <dt>embedded style sheet</dt>
-    <dd>
-        A collection of CSS rules defined directly inside a
-        <code>&lt;style&gt;</code> element within the
-        <code>&lt;head&gt;</code> section of an HTML document.
-    </dd>
+        <h2>Building HTML Lists</h2>
 
-    <dt>external style sheet</dt>
-    <dd>
-        A standalone file with a <code>.css</code> extension containing
-        CSS rules that are linked to an HTML document using the
-        <code>&lt;link&gt;</code> element.
-    </dd>
+        <dl>
+            <dt>embedded style sheet</dt>
+            <dd>
+                A collection of CSS rules defined directly inside a
+                <code>&lt;style&gt;</code> element within the
+                <code>&lt;head&gt;</code> section of an HTML document.
+            </dd>
 
-    <dt>inline style</dt>
-    <dd>
-        CSS declarations applied directly to a single HTML element
-        using the <code>style</code> attribute.
-    </dd>
-</dl>
+            <dt>external style sheet</dt>
+            <dd>
+                A standalone file with a <code>.css</code> extension
+                containing CSS rules that are linked to an HTML document
+                using the <code>&lt;link&gt;</code> element.
+            </dd>
 
-<h2>Working With Images</h2>
+            <dt>inline style</dt>
+            <dd>
+                CSS declarations applied directly to a single HTML
+                element using the <code>style</code> attribute.
+            </dd>
+        </dl>
 
-<img src="media/retro.png"
-     alt="A retro computer desk setup with a classic vintage computer in PNG format."
-     width="167"
-     height="250"
-     class="bordered-image">
+        <h2>Working With Images</h2>
 
-<img src="media/retro.jpg"
-     alt="A retro computer desk setup with a classic vintage computer in JPG format."
-     width="167"
-     height="250"
-     class="bordered-image">
+        <img src="media/retro.png"
+             alt="A retro computer desk setup with a classic vintage computer in PNG format."
+             width="167"
+             height="250"
+             class="bordered-image">
 
-<p>
-    The PNG and JPG versions show the same retro computer desk image.
-    The PNG version preserves more image information, while the JPG
-    version uses compression to create a smaller file size. The two
-    images may have slight differences in visual quality because of
-    the compression used by the JPG format.
-</p>
+        <img src="media/retro.jpg"
+             alt="A retro computer desk setup with a classic vintage computer in JPG format."
+             width="167"
+             height="250"
+             class="bordered-image">
 
-<figure>
-    <img src="media/keyboard.jpg"
-         alt="A vintage IBM computer keyboard with a classic retro design."
-         class="bordered-image">
+        <p>
+            The PNG and JPG versions show the same retro computer desk
+            image. The PNG version preserves more image information,
+            while the JPG version uses compression to create a smaller
+            file size. The two images may have slight differences in
+            visual quality because of the compression used by the JPG
+            format.
+        </p>
 
-    <figcaption>
-        A vintage IBM computer keyboard featuring a classic retro design.
-    </figcaption>
-</figure>
+        <figure>
+            <img src="media/keyboard.jpg"
+                 alt="A vintage IBM computer keyboard with a classic retro design."
+                 class="bordered-image">
 
-<h2>Responsive Design Images</h2>
+            <figcaption>
+                A vintage IBM computer keyboard featuring a classic retro design.
+            </figcaption>
+        </figure>
+    </section>
 
-<section id="image-flex">
-    <figure>
-        <img src="media/images1.jpg"
-             alt="A vintage beige computer with a classic, retro design.">
-        <figcaption>
-            A vintage beige computer with a classic, retro design.
-        </figcaption>
-    </figure>
+    <section id="image-flex">
+        <h2>Responsive Design Images</h2>
 
-    <figure>
-        <img src="media/images2.jpg"
-             alt="A colorful computer screen displaying a mixture of programming code.">
-        <figcaption>
-            A colorful computer screen displaying a mixture of programming code.
-        </figcaption>
-    </figure>
+        <figure>
+            <img src="media/images1.jpg"
+                 alt="A vintage beige computer with a classic, retro design.">
+            <figcaption>
+                A vintage beige computer with a classic, retro design.
+            </figcaption>
+        </figure>
 
-    <figure>
-        <img src="media/images3.jpg"
-             alt="The Linux penguin mascot wearing glasses with a green shell in the background.">
-        <figcaption>
-            The Linux penguin mascot wearing glasses with a green shell in the background.
-        </figcaption>
-    </figure>
+        <figure>
+            <img src="media/images2.jpg"
+                 alt="A colorful computer screen displaying a mixture of programming code.">
+            <figcaption>
+                A colorful computer screen displaying a mixture of programming code.
+            </figcaption>
+        </figure>
 
-    <figure>
-        <img src="media/images4.jpg"
-             alt="The Windows 11 desktop displaying its modern interface.">
-        <figcaption>
-            The Windows 11 desktop displaying its modern interface.
-        </figcaption>
-    </figure>
-</section>
+        <figure>
+            <img src="media/images3.jpg"
+                 alt="The Linux penguin mascot wearing glasses with a green shell in the background.">
+            <figcaption>
+                The Linux penguin mascot wearing glasses with a green shell in the background.
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="media/images4.jpg"
+                 alt="The Windows 11 desktop displaying its modern interface.">
+            <figcaption>
+                The Windows 11 desktop displaying its modern interface.
+            </figcaption>
+        </figure>
+    </section>
+</main>
 
 <footer id="footer">
     <p>&copy;2025, Michael Barnes</p>
