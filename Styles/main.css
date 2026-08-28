@@ -93,7 +93,7 @@ color: #1a365d;
 color: #2c5282;
 }
 
-/* Links */
+/* General links */
 a {
 color: #0056b3;
 }
@@ -105,6 +105,30 @@ color: #4b0082;
 a:hover,
 a:focus {
 color: #d9534f;
+}
+
+/* Table styling */
+table {
+width: 100%;
+border-collapse: collapse;
+margin: 20px 0;
+}
+
+th,
+td {
+border: 1px solid #333333;
+padding: 10px;
+text-align: left;
+}
+
+th {
+background-color: #1a365d;
+color: #ffffff;
+}
+
+/* Apply a background color to every even table row */
+tbody tr:nth-child(even) {
+background-color: #e2e8f0;
 }
 
 /* Images */
@@ -209,6 +233,16 @@ main {
 
 footer {
     padding: 10px;
+}
+
+/* Keep the table readable on small screens */
+table {
+    font-size: 0.9em;
+}
+
+th,
+td {
+    padding: 8px;
 }
 ```
 
