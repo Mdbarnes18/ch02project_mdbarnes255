@@ -12,7 +12,7 @@ const requiredFields = document.querySelectorAll(".required");
 const missingCount = document.getElementById("missing-count");
 let count = 0;
 
-```
+
 requiredFields.forEach(function(field) {
     if (field.value.trim() === "") {
         count++;
@@ -27,7 +27,7 @@ if (count > 0) {
 
 missingCount.textContent = "";
 return true;
-```
+
 
 }
 
@@ -38,7 +38,7 @@ contains at least eight characters.
 function validateEmail() {
 const email = document.getElementById("email");
 
-```
+
 if (email.value.trim().length < 8) {
     email.classList.add("invalid-email");
     return false;
@@ -46,7 +46,7 @@ if (email.value.trim().length < 8) {
 
 email.classList.remove("invalid-email");
 return true;
-```
+
 
 }
 
@@ -58,7 +58,7 @@ function validateForm() {
 const fieldsValid = checkMissing();
 const emailValid = validateEmail();
 
-```
+
 if (!fieldsValid || !emailValid) {
     alert("Please complete all required fields and enter a valid email address.");
     return false;
@@ -66,7 +66,7 @@ if (!fieldsValid || !emailValid) {
 
 alert("Your form has been submitted successfully.");
 return true;
-```
+
 
 }
 
@@ -77,7 +77,7 @@ to the validation function after the page loads.
 window.addEventListener("load", function() {
 const button = document.getElementById("submit-button");
 
-```
+
 console.log("Page loaded. Found button:", button);
 
 if (button) {
@@ -94,6 +94,6 @@ if (button) {
         "FAILED: No element with id='submit-button' exists in the HTML."
     );
 }
-```
+
 
 });
