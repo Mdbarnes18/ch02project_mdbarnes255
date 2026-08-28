@@ -3,60 +3,89 @@ Name: Michael Barnes
 Date: 08/28/2026
 */
 
+/*
+This function checks if any required fields are empty
+and displays the number of missing fields.
+*/
 function checkMissing() {
-    const fields = document.querySelectorAll(".required");
-    const missingMessage = document.getElementById("missing-count");
-    let missing = 0;
+const requiredFields = document.querySelectorAll(".required");
+const missingCount = document.getElementById("missing-count");
+let count = 0;
 
-    for (let i = 0; i < fields.length; i++) {
-        if (fields[i].value.trim() === "") {
-            missing++;
-        }
+```
+requiredFields.forEach(function(field) {
+    if (field.value.trim() === "") {
+        count++;
     }
+});
 
-    if (missingMessage) {
-        if (missing > 0) {
-            missingMessage.textContent = missing + " required field(s) are missing.";
-            return false;
-        }
-        missingMessage.textContent = "";
-    }
-    return missing === 0;
+if (count > 0) {
+    missingCount.textContent =
+        count + " required field(s) are missing.";
+    return false;
 }
 
+missingCount.textContent = "";
+return true;
+```
+
+}
+
+/*
+This function checks whether the email address
+contains at least eight characters.
+*/
 function validateEmail() {
-    const email = document.getElementById("email");
-    if (!email) return false;
+const email = document.getElementById("email");
 
-    if (email.value.trim().length < 8) {
-        email.classList.add("invalid-email");
-        return false;
-    }
-
-    email.classList.remove("invalid-email");
-    return true;
+```
+if (email.value.trim().length < 8) {
+    email.classList.add("invalid-email");
+    return false;
 }
 
-function validateForm(event) {
-    // Stops the form from submitting and refreshing the page
-    if (event) event.preventDefault();
+email.classList.remove("invalid-email");
+return true;
+```
 
-    const missingFields = checkMissing();
-    const validEmail = validateEmail();
-
-    if (!missingFields || !validEmail) {
-        alert("Please complete all required fields and enter a valid email address.");
-    } else {
-        alert("Your form has been submitted successfully.");
-    }
 }
 
+/*
+This function runs both checkMissing() and validateEmail()
+when the submit button is clicked.
+*/
+function validateForm() {
+const missingFields = checkMissing();
+const validEmail = validateEmail();
+
+```
+if (!missingFields || !validEmail) {
+    alert("Please complete all required fields and enter a valid email address.");
+    return false;
+}
+
+alert("Your form has been submitted successfully.");
+return true;
+```
+
+}
+
+/*
+This event listener connects the submit button
+to the validateForm() function after the page loads.
+*/
 window.addEventListener("load", function() {
-    const button = document.getElementById("submit-button");
+const button = document.getElementById("submit-button");
 
-    if (button) {
-        button.addEventListener("click", validateForm);
-    } else {
-        console.error("Submit button with id='submit-button' was not found in the HTML.");
-    }
+```
+console.log("Page loaded. Found button:", button);
+
+if (button) {
+    button.addEventListener("click", validateForm);
+    console.log("Click listener successfully attached!");
+} else {
+    console.error("FAILED: No element with id='submit-button' exists in the HTML.");
+}
+```
+
 });
