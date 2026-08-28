@@ -51,15 +51,15 @@ return true;
 }
 
 /*
-This function runs both checkMissing() and validateEmail()
+This function runs checkMissing() and validateEmail()
 when the submit button is clicked.
 */
 function validateForm() {
-const missingFields = checkMissing();
-const validEmail = validateEmail();
+const fieldsValid = checkMissing();
+const emailValid = validateEmail();
 
 ```
-if (!missingFields || !validEmail) {
+if (!fieldsValid || !emailValid) {
     alert("Please complete all required fields and enter a valid email address.");
     return false;
 }
@@ -69,23 +69,3 @@ return true;
 ```
 
 }
-
-/*
-This event listener connects the submit button
-to the validateForm() function after the page loads.
-*/
-window.addEventListener("load", function() {
-const button = document.getElementById("submit-button");
-
-```
-console.log("Page loaded. Found button:", button);
-
-if (button) {
-    button.addEventListener("click", validateForm);
-    console.log("Click listener successfully attached!");
-} else {
-    console.error("FAILED: No element with id='submit-button' exists in the HTML.");
-}
-```
-
-});
